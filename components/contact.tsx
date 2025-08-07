@@ -50,17 +50,17 @@ export default function Contact() {
     {
       icon: <Mail className="text-purple-400" size={24} />,
       label: "Email",
-      value: "amanmurarisingh94700@gmail.com",
+      value: "amanmuraris@gmail.com",
     },
     {
       icon: <Phone className="text-purple-400" size={24} />,
       label: "Phone",
-      value: "+91 9470013345",
+      value: "+91 9229275147",
     },
     {
       icon: <MapPin className="text-purple-400" size={24} />,
       label: "Location",
-      value: "Arwal, Aurangabad, Bihar, India",
+      value: "Patan, Bihar, India",
     },
   ]
 
