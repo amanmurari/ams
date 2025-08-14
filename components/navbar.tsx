@@ -62,7 +62,7 @@ export default function Navbar({ isMobile }: NavbarProps) {
                 </div>
               ) : (
                 <Image
-                  src="/aman.png"
+                  src="aman.png"
                   alt="Aman Murari Singh"
                   fill
                   className="object-cover"
