@@ -94,7 +94,7 @@ export default function Hero() {
           className="flex flex-wrap gap-4 justify-center md:justify-start"
         >
           <a
-            href="/Resume.pdf"
+            href="Resume.pdf"
             download
             className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-medium hover:opacity-90 transition-opacity relative group overflow-hidden"
           >
