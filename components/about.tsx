@@ -67,7 +67,7 @@ As a data scientist and web developer, I'm driven by the pursuit of innovation, 
               ) : (
                 <div className="relative w-full h-full">
                   <Image
-                    src="/aman.png"
+                    src="aman.png"
                     alt="Aman Murari Singh"
                     fill
                     className="object-cover"
