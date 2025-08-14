@@ -128,7 +128,7 @@ export default function Hero() {
             ) : (
               <div className="relative w-full h-full">
                 <Image
-                  src="/aman.png"
+                  src="aman.png"
                   alt="Aman Murari Singh"
                   fill
                   className="object-cover"
