@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Aman Murari Singh - Portfolio",
   description: "Personal portfolio website of Aman Murari Singh, AI Engineer and Web Developer",
-    generator: 'v0.dev'
+    
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
