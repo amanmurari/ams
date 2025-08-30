@@ -45,6 +45,9 @@ export default function Skills() {
       { name: "SQL", icon: <Database size={24} className="text-green-500" /> },
       { name: "PHP", icon: <FileCode size={24} className="text-purple-400" /> },
       { name: "C++", icon: <Cpu size={24} className="text-blue-600" /> },
+      { name: "C", icon: <Cpu size={24} className="text-purple-600" /> },
+      { name: "Rust", icon: <Cpu size={24} className="text-blue-600" /> },
+      { name: "Julia", icon: <Javascript size={24} className="text-orange-400" /> },
     ],
     databases: [
       { name: "MySQL", icon: <DatabaseIcon size={24} className="text-blue-500" /> },

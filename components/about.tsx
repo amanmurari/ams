@@ -16,15 +16,11 @@ export default function About() {
   useEffect(() => {
     if (!aboutTextRef.current || !isInView) return
 
-    const aboutText = `I'm Aman Murari Singh, a passionate data scientist and web developer with a strong foundation in programming languages such as HTML, CSS, and JavaScript. With a strong aptitude for learning, I've completed various courses in web designing, marketing, and data science to stay ahead of the curve. 
+    const aboutText = `AI Researcher and Engineer specializing in deep learning, large language models, and multi-agent systems with a strong foundation in both theoretical concepts and production-grade implementation. Currently advancing LLM research as an AI Intern at Vizuara AI Lab, I architect and deploy scalable AI solutions that bridge cutting-edge research with practical applications.
 
-My expertise lies in crafting user-centric experiences through intuitive web design, leveraging tools like HTML5, CSS3, and JavaScript. I'm also fascinated by the world of data science, where I've explored libraries like NumPy, pandas, and scikit-learn to extract insights from complex data sets. 
+My expertise spans transformer architectures (GPT-2, LLaMA-3, DeepSeek-V3), reinforcement learning (DQN, PPO), and multi-agent frameworks (CrewAI, LangGraph, AutoGen). I've engineered end-to-end RAG systems using LangChain with Google Gemini, developed Django-based AI applications, and implemented transformer architectures from scratch with MoE routing and advanced attention mechanisms. My portfolio includes building a stock price prediction model with LSTM (85% accuracy), a dog emotion detection system (95% accuracy), and django-gpt—a specialized RAG agent for Django documentation.
 
-When I'm not coding or analyzing data, you can find me teaching, fighting, or learning new skills. I believe that staying curious and adapting to new technologies is key to success in today's fast-paced tech landscape.
-
-Throughout my academic journey, I've consistently achieved high academic grades, with a 81% in 10th standard and 87% in 12th standard. I've also completed various certification courses in web design, marketing, and data science to stay updated with the latest industry trends.
-
-As a data scientist and web developer, I'm driven by the pursuit of innovation, creativity, and collaboration. I'm committed to leveraging my skills to create impactful solutions that make a difference in people's lives.`
+Proficient in Python, PyTorch, TensorFlow, and full-stack development with Django, I combine data science skills (Pandas, NumPy, Scikit-learn) with modern AI tooling (LangChain, LlamaIndex, Vector DBs). Certified in Multi AI Agent Systems by CrewAI and TensorFlow development, I transform complex AI concepts into efficient, maintainable solutions. My open-source contributions reflect a commitment to advancing accessible, production-ready AI systems that solve real-world challenges across multiple domains.`
 
     let index = 0
     aboutTextRef.current.textContent = ""

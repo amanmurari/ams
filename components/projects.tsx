@@ -13,10 +13,10 @@ export default function Projects() {
   const projects = [
     {
       title: "Multi Model Chatbot",
-      description: "A chatbot that leverages multiple AI models to provide comprehensive responses to user queries.",
-      tags: ["Python", "LangChain", "AI", "NLP"],
-      image: "/placeholder.svg?height=300&width=400",
-      githubLink: "#",
+      description: "A flexible and efficient system for retrieving and generating responses using both text and image data.",
+      tags: ["Python", "pytorch","LangChain", "AI", "NLP","CV"],
+      image: "placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/multimodal-Rag",
       demoLink: "#",
     },
     {
@@ -24,35 +24,58 @@ export default function Projects() {
       description:
         "Implementation of Retrieval Augmented Generation using Google's Gemini model for enhanced information retrieval.",
       tags: ["Python", "Gemini API", "Vector DB", "RAG"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: "placeholder.svg?height=300&width=400",
       githubLink: "#",
       demoLink: "#",
     },
     {
-      title: "Autonomous RAG",
+      title: "Django GPT: Agent-Oriented RAG for Django Development: Write Code, Not Docs",
       description:
-        "Self-improving RAG system that autonomously enhances its knowledge base and retrieval capabilities.",
-      tags: ["Python", "LlamaIndex", "AutoGen", "AI"],
-      image: "/placeholder.svg?height=300&width=400",
-      githubLink: "#",
+        `django-gpt is a LangGraph-powered agent system that autonomously writes production-ready Django code by fusing official documentation, real-time web search, and project context. Unlike static RAG tools, it operates as a multi-agent workflow that:
+1️⃣ Understands requirements via natural language prompts
+2️⃣ Retrieves & verifies Django-specific knowledge (docs,SO, GitHub)
+3️⃣ Generates, validates, and writes code directly to your project files
+No more tab-switching between docs and IDE – it builds Django apps while you sip coffee. ☕`,
+      tags: ["Python", "LangChain", "LangGraph", "Agent", "Web search"],
+      image: "placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/django-gpt",
       demoLink: "#",
     },
-    // {
-    //   title: "Emotion Detection",
-    //   description: "Computer vision system that detects and classifies human emotions from facial expressions.",
-    //   tags: ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
-    //   image: "/placeholder.svg?height=300&width=400",
-    //   githubLink: "#",
-    //   demoLink: "#",
-    // },
-    // {
-    //   title: "Self Driving Car",
-    //   description: "Simulation of a self-driving car using reinforcement learning and computer vision techniques.",
-    //   tags: ["Python", "PyTorch", "Reinforcement Learning"],
-    //   image: "/placeholder.svg?height=300&width=400",
-    //   githubLink: "#",
-    //   demoLink: "#",
-    // },
+    {
+      title: "Llama2 VLM from scratch",
+      description:
+        "Llama2-VLM-from-scratch is an open-source project to build a Vision-Language Model (VLM) entirely from scratch, inspired by Llama2's architecture but trained without pre-existing weights. Unlike fine-tuned VLMs (e.g., LLaVA), this project trains both the vision encoder and language decoder from random initialization on multimodal data, enabling true end-to-end vision-language understanding and generation.",
+      tags: ["competition winner", "pytorch", "tiktoken", "Transformer", "CV", "NLP"],
+      image: "placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/Llama2-VLM-from-scratch",
+      demoLink: "#",
+    },
+
+    {
+      title: "nanoKimi-K2 from scratch",
+      description:
+        "nanoKimi is a lightweight, production-ready reimplementation of the cutting-edge Kimi-K2 architecture—distilling its breakthrough innovations (Muon optimizer, Mixture of Experts, Latent Attention) into a sub-1B parameter model optimized for edge devices, rapid fine-tuning, and low-cost scaling. Unlike resource-hungry LLMs, nanoKimi delivers 80% of Kimi-K2’s reasoning capabilities at 1/10th the compute, making next-gen language modeling accessible for startups, researchers, and embedded systems.",
+      tags: ["Python", "pytorch", "tiktoken", "Transformer","NLP"],
+      image: "placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/nanokimi",
+      demoLink: "#",
+    },
+    {
+      title: "Fruit Detection",
+      description: "Computer vision system that detects and classifies fruits and draw bounding box around them.",
+      tags: ["Python", "OpenCV", "TensorFlow", "Computer Vision"],
+      image: "/placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/fruit-detection",
+      demoLink: "#",
+    },
+    {
+      title: "E-commerce Platform",
+      description: "Django E-Commerce Platform Production-ready online store built with Django featuring secure user authentication, dynamic product catalog, and responsive shopping cart system. implements RESTful APIs, and follows MVC architecture. Includes inventory management, recommendation algorithms, and comprehensive testing. Scalable solution optimized for performance across all devices with clean, maintainable code structure.",
+      tags: ["Python", "PyTorch", "Reinforcement Learning"],
+      image: "/placeholder.svg?height=300&width=400",
+      githubLink: "https://github.com/amanmurari/ecommerce-df",
+      demoLink: "#",
+    },
     // {
     //   title: "ChatBot",
     //   description: "Conversational AI assistant built with modern NLP techniques for natural interactions.",
@@ -139,7 +162,7 @@ export default function Projects() {
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
                 <img
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image || "placeholder.svg"}
                   alt={`${project.title} screenshot`}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -206,7 +229,7 @@ export default function Projects() {
             <div className="relative h-48 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10"></div>
               <img
-                src={projects[activeIndex].image || "/placeholder.svg"}
+                src={projects[activeIndex].image || "placeholder.svg"}
                 alt={projects[activeIndex].title}
                 className="w-full h-full object-cover"
               />

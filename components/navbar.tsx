@@ -107,6 +107,16 @@ export default function Navbar({ isMobile }: NavbarProps) {
             </li>
             <li>
               <a
+                href="#experience"
+                onClick={closeMenu}
+                className="text-white hover:text-purple-400 transition-colors relative group"
+              >
+                Experience
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="#projects"
                 onClick={closeMenu}
                 className="text-white hover:text-purple-400 transition-colors relative group"

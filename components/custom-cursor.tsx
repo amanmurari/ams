@@ -72,23 +72,28 @@ export default function CustomCursor() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[100] pointer-events-none mix-blend-difference"
+      className="fixed top-0 left-0 z-[100] pointer-events-none"
       animate={{
-        x: position.x - 15,
-        y: position.y - 15,
-        scale: clicked ? 0.8 : hovered ? 1.5 : 1,
+        x: position.x - 12, // Center the cursor
+        y: position.y - 12, // Center the cursor
+        scale: clicked ? 0.8 : hovered ? 1.8 : 1.2,
       }}
       transition={{
         type: "spring",
-        damping: 20,
-        stiffness: 150,
-        mass: 0.8,
+        damping: 15,
+        stiffness: 500,
+        mass: 0.5,
       }}
       style={{
         opacity: hidden ? 0 : 1,
+        pointerEvents: 'none',
+        width: '24px',
+        height: '24px',
+        backgroundColor: 'rgba(236, 72, 153, 0.8)', // Pink color with transparency
+        borderRadius: '50%',
+        boxShadow: '0 0 10px rgba(236, 72, 153, 0.5)', // Glow effect
+        transition: 'background-color 0.2s, transform 0.2s',
       }}
-    >
-      <div className="w-8 h-8 rounded-full border-2 border-white opacity-80" />
-    </motion.div>
+    />
   )
 }
