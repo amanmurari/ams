@@ -1,6 +1,6 @@
-import * as THREE from "three"
-import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry"
-import { FontLoader } from "three/examples/jsm/loaders/FontLoader"
+import * as THREE from 'three'
+import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 
 export async function createText() {
   // Create a group to hold text elements
@@ -14,14 +14,14 @@ export async function createText() {
       // Create "FIFA WORLD CUP" text
       const textGeometry = new TextGeometry("FIFA WORLD CUP", {
         font: font,
-        size: 0.3,
-        height: 0.05,
-        curveSegments: 12,
-        bevelEnabled: true,
-        bevelThickness: 0.02,
-        bevelSize: 0.01,
-        bevelOffset: 0,
-        bevelSegments: 5,
+      size: 0.3,
+      height: 0.05,
+      curveSegments: 12,
+      bevelEnabled: true,
+      bevelThickness: 0.02,
+      bevelSize: 0.01,
+      bevelOffset: 0,
+      bevelSegments: 5,
       })
 
       textGeometry.center()
