@@ -3,6 +3,10 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "three/examples/jsm/*": ["node_modules/three/examples/jsm/*"]
+    },
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
