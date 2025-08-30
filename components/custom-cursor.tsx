@@ -1,24 +1,30 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
-  const [hidden, setHidden] = useState(true)
+  const [position, setPosition] = useState({ x: -100, y: -100 })
+  const [hidden, setHidden] = useState(false)
   const [clicked, setClicked] = useState(false)
   const [hovered, setHovered] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Only run on client
     if (typeof window === "undefined") return
 
+    setIsVisible(true)
+
     const updatePosition = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
-      setHidden(false)
     }
 
-    const handleMouseDown = () => setClicked(true)
+    const handleMouseDown = () => {
+      setClicked(true)
+      setTimeout(() => setClicked(false), 100)
+    }
+    
     const handleMouseUp = () => setClicked(false)
     const handleMouseLeave = () => setHidden(true)
     const handleMouseEnter = () => setHidden(false)
@@ -71,29 +77,70 @@ export default function CustomCursor() {
   }
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 z-[100] pointer-events-none"
-      animate={{
-        x: position.x - 12, // Center the cursor
-        y: position.y - 12, // Center the cursor
-        scale: clicked ? 0.8 : hovered ? 1.8 : 1.2,
-      }}
-      transition={{
-        type: "spring",
-        damping: 15,
-        stiffness: 500,
-        mass: 0.5,
-      }}
-      style={{
-        opacity: hidden ? 0 : 1,
-        pointerEvents: 'none',
-        width: '24px',
-        height: '24px',
-        backgroundColor: 'rgba(236, 72, 153, 0.8)', // Pink color with transparency
-        borderRadius: '50%',
-        boxShadow: '0 0 10px rgba(236, 72, 153, 0.5)', // Glow effect
-        transition: 'background-color 0.2s, transform 0.2s',
-      }}
-    />
+    <AnimatePresence>
+      {isVisible && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          pointerEvents: 'none',
+          zIndex: 9999,
+          overflow: 'hidden'
+        }}>
+          <motion.div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '24px',
+              height: '24px',
+              backgroundColor: 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '50%',
+              boxShadow: '0 0 15px rgba(255, 255, 255, 0.7)',
+              transform: 'translate(-50%, -50%)',
+              pointerEvents: 'none',
+              zIndex: 9999,
+              mixBlendMode: 'difference'
+            }}
+            initial={{ opacity: 0 }}
+            animate={{
+              x: position.x,
+              y: position.y,
+              scale: clicked ? 0.7 : hovered ? 2 : 1,
+              opacity: hidden ? 0 : 1,
+            }}
+            exit={{ opacity: 0 }}
+            transition={{
+              x: { type: 'spring', damping: 20, stiffness: 1000, mass: 0.5 },
+              y: { type: 'spring', damping: 20, stiffness: 1000, mass: 0.5 },
+              scale: { type: 'spring', damping: 20, stiffness: 500, mass: 0.5 },
+              opacity: { duration: 0.2 }
+            }}
+          >
+            <motion.div 
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                borderRadius: '50%',
+                backgroundColor: 'rgba(255, 255, 255, 0.3)',
+              }}
+              animate={{
+                scale: hovered ? 0.6 : 1,
+                opacity: hovered ? 0.5 : 0,
+              }}
+              transition={{
+                duration: 0.3,
+                ease: 'easeOut'
+              }}
+            />
+          </motion.div>
+        </div>
+      )}
+    </AnimatePresence>
   )
 }
