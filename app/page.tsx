@@ -66,9 +66,9 @@ export default function Home() {
             <Projects />
           </AnimatedSection>
 
-                    {/* <AnimatedSection delay={0.7}>
+                    <AnimatedSection delay={0.7}>
             <Contact /> 
-          </AnimatedSection> */}
+          </AnimatedSection>
 
                     <AnimatedSection delay={0.8}>
             <Footer />

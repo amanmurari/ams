@@ -1,9 +1,10 @@
 "use client"
 
 import type React from "react"
-import { useRef, useState } from "react"
+import { useRef, useState, FormEvent } from "react"
 import { motion, useInView } from "framer-motion"
 import { Send, Mail, Phone, MapPin, Github, Linkedin } from "lucide-react"
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -23,7 +24,7 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
     // Validate form
@@ -32,65 +33,39 @@ export default function Contact() {
       return
     }
 
-    // Create a hidden form
-    const form = document.createElement('form')
-    form.style.display = 'none'
-    form.method = 'POST'
-    form.action = 'https://formsubmit.co/13b66fbb476a87215abb41633a861eea'
-    form.target = 'formsubmit-iframe'
-    
-    // Add form fields
-    const fields = {
-      name: formData.name,
-      email: formData.email,
-      message: formData.message,
-      _subject: 'New Contact Form Submission',
-      _template: 'basic',
-      _captcha: 'false',
-      _next: window.location.href
-    }
-    
-    Object.entries(fields).forEach(([key, value]) => {
-      const input = document.createElement('input')
-      input.type = 'hidden'
-      input.name = key
-      input.value = value
-      form.appendChild(input)
-    })
-    
-    // Create hidden iframe for form submission
-    let iframe = document.getElementById('formsubmit-iframe') as HTMLIFrameElement
-    if (!iframe) {
-      iframe = document.createElement('iframe')
-      iframe.id = 'formsubmit-iframe'
-      iframe.name = 'formsubmit-iframe'
-      iframe.style.display = 'none'
-      document.body.appendChild(iframe)
-    }
-    
-    // Handle successful submission
-    iframe.onload = () => {
-      setFormStatus("success")
-      setFormData({ name: "", email: "", message: "" })
-      setIsSubmitting(false)
-      setTimeout(() => setFormStatus(null), 3000)
-      // Clean up
-      document.body.removeChild(form)
-    }
-    
-    // Handle errors
-    iframe.onerror = () => {
-      setFormStatus("error")
-      setIsSubmitting(false)
-      setTimeout(() => setFormStatus(null), 3000)
-    }
-    
-    // Submit the form
-    document.body.appendChild(form)
-    form.submit()
-    
     // Show loading state
     setIsSubmitting(true)
+
+    try {
+      // Replace these with your actual EmailJS service ID, template ID, and public key
+      const serviceId = 'service_9ycq04n';
+      const templateId = 'template_4rcj0pv';
+      const publicKey = 'Yas1tiCvp9p31Wnnm';
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          to_email: 'amanmuraris@gmail.com' // Your email address
+        },
+        publicKey
+      )
+
+      // Handle successful submission
+      setFormStatus("success")
+      setFormData({ name: "", email: "", message: "" })
+      setTimeout(() => setFormStatus(null), 5000)
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      setFormStatus("error")
+      setTimeout(() => setFormStatus(null), 5000)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -260,7 +235,7 @@ export default function Contact() {
           >
             <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl group-hover:bg-pink-500/20 transition-all duration-700"></div>
 
-            <form onSubmit={handleSubmit} className="space-y-6" target="formsubmit-iframe">
+            <form onSubmit={handleSubmit} className="space-y-6" id="contact-form">
               <div className="relative">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
                   Name
