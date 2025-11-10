@@ -96,7 +96,7 @@ export default function Contact() {
         delayChildren: 0.2,
       },
     },
-  }
+  } as const
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -105,10 +105,10 @@ export default function Contact() {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 0, 0.3, 1],
       },
     },
-  }
+  } as const
 
   const formVariants = {
     hidden: { x: -50, opacity: 0 },
@@ -117,11 +117,11 @@ export default function Contact() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 0, 0.3, 1],
         delay: 0.3,
       },
     },
-  }
+  } as const
 
   return (
     <section id="contact" ref={sectionRef} className="py-20 px-4 md:px-12 bg-black/30 relative z-10 overflow-hidden">
