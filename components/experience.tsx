@@ -20,9 +20,12 @@ const Branch = ({ isLeft }: { isLeft: boolean }) => {
     visible: {
       pathLength: 1,
       opacity: 1,
-      transition: { duration: 1, ease: "easeInOut" },
+      transition: { 
+        duration: 1, 
+        ease: [0.16, 0, 0.3, 1] 
+      },
     },
-  }
+  } as const
   return (
     <motion.svg
       width="100"
@@ -59,14 +62,23 @@ export default function Experience() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: { 
+        duration: 0.8, 
+        ease: [0.16, 0, 0.3, 1] 
+      },
     },
-  })
+  } as const)
 
   const trunkVariants = {
     hidden: { pathLength: 0 },
-    visible: { pathLength: 1, transition: { duration: 2, ease: "easeInOut" } },
-  }
+    visible: { 
+      pathLength: 1, 
+      transition: { 
+        duration: 2, 
+        ease: [0.16, 0, 0.3, 1] 
+      } 
+    },
+  } as const
 
   return (
     <section id="experience" ref={ref} className="py-20 md:py-28 px-4 md:px-12 scroll-mt-20">
