@@ -67,7 +67,7 @@ export default function Home() {
           </AnimatedSection>
 
                     <AnimatedSection delay={0.7}>
-            <Contact />
+            {/* <Contact /> */}
           </AnimatedSection>
 
                     <AnimatedSection delay={0.8}>
