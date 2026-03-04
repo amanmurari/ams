@@ -16,11 +16,11 @@ export default function Footer() {
         >
           <p className="relative inline-block">
             © {currentYear} All rights reserved by
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 ml-1">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600 ml-1">
               Aman Murari Singh
             </span>
             <motion.span
-              className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-pink-600"
+              className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-cyan-600"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               transition={{ duration: 1, delay: 0.5 }}

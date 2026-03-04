@@ -57,7 +57,7 @@ export default function Navbar({ isMobile }: NavbarProps) {
           <div className="flex items-center">
             <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-500 relative">
               {imageError ? (
-                <div className="w-full h-full bg-gradient-to-br from-purple-800 to-pink-700 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-purple-800 to-cyan-700 flex items-center justify-center">
                   <span className="text-white text-sm font-bold">AS</span>
                 </div>
               ) : (

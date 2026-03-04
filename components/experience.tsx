@@ -6,10 +6,16 @@ import { Briefcase } from "lucide-react"
 
 const experienceData = [
   {
+    title: "AI Engineer",
+    company: "DoubtBuddy",
+    date: "Sept 2025 - present",
+    description: "Working on AI Excel Agent. Datagentz.",
+  },
+  {
     title: "AI Research Intern",
     company: "Vizuara Research Labs",
-    date: "Aug 2025 - present",
-    description: "Working on AI Research projects. which is not done this before.",
+    date: "Aug 2025 - Oct 2025",
+    description: "Worked on AI Research projects. which is not done this before.",
   },
   
 ]
@@ -82,7 +88,7 @@ export default function Experience() {
 
   return (
     <section id="experience" ref={ref} className="py-20 md:py-28 px-4 md:px-12 scroll-mt-20">
-      <h2 className="text-3xl font-bold text-center mb-24 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+      <h2 className="text-3xl font-bold text-center mb-24 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600">
         My Experience
       </h2>
       <div className="relative max-w-4xl mx-auto min-h-full">
@@ -130,11 +136,11 @@ export default function Experience() {
                   className={`relative w-5/12 p-6 rounded-lg border bg-gray-800/30 backdrop-blur-sm transition-all duration-300 group ${
                     isLeft
                       ? "border-purple-500/30 hover:border-purple-500"
-                      : "border-pink-500/30 hover:border-pink-500"
+                      : "border-cyan-500/30 hover:border-cyan-500"
                   }`}
                 >
-                  <div className={`absolute -inset-px rounded-lg bg-gradient-to-r ${isLeft ? 'from-purple-500/20' : 'from-pink-500/20'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
-                  <p className={`text-sm mb-1 ${isLeft ? "text-purple-400" : "text-pink-400"}`}>{exp.date}</p>
+                  <div className={`absolute -inset-px rounded-lg bg-gradient-to-r ${isLeft ? 'from-purple-500/20' : 'from-cyan-500/20'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
+                  <p className={`text-sm mb-1 ${isLeft ? "text-purple-400" : "text-cyan-400"}`}>{exp.date}</p>
                   <h3 className="text-xl font-bold text-white">{exp.title}</h3>
                   <p className="text-md text-gray-300 mb-2">{exp.company}</p>
                   <p className="text-sm text-gray-400">{exp.description}</p>
@@ -142,7 +148,7 @@ export default function Experience() {
                 
                 {/* Timeline Dot / Fruit */}
                 <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-gray-900 border-2 rounded-full flex items-center justify-center z-10 transition-all duration-300 group-hover:scale-110">
-                   <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-br ${isLeft ? 'from-purple-600 to-pink-600' : 'from-pink-600 to-purple-600'} shadow-lg group-hover:shadow-xl group-hover:shadow-purple-500/30`}>
+                   <div className={`w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-br ${isLeft ? 'from-purple-600 to-cyan-600' : 'from-cyan-600 to-purple-600'} shadow-lg group-hover:shadow-xl group-hover:shadow-purple-500/30`}>
                      <Briefcase size={18} className="text-white" />
                    </div>
                 </div>

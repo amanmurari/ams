@@ -40,7 +40,7 @@ Proficient in Python, PyTorch, TensorFlow, and full-stack development with Djang
   return (
     <section id="about" ref={sectionRef} className="py-20 px-4 md:px-12 relative z-10">
       <TextReveal>
-        <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600">
           About Me
         </h2>
       </TextReveal>
@@ -53,11 +53,11 @@ Proficient in Python, PyTorch, TensorFlow, and full-stack development with Djang
           className="w-full md:w-1/3"
         >
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-2xl blur-lg"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 rounded-2xl blur-lg"></div>
             <div className="relative w-full max-w-sm mx-auto aspect-square rounded-2xl overflow-hidden border-4 border-purple-500 shadow-xl shadow-purple-500/20 transform-gpu hover:scale-105 transition-transform duration-300">
               {/* Removed the overlay filter */}
               {imageError ? (
-                <div className="w-full h-full bg-gradient-to-br from-purple-800 to-pink-700 flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-purple-800 to-cyan-700 flex items-center justify-center">
                   <span className="text-white text-4xl font-bold">AS</span>
                 </div>
               ) : (
@@ -119,7 +119,7 @@ Proficient in Python, PyTorch, TensorFlow, and full-stack development with Djang
 
             {!isMobile && (
               <motion.div
-                className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-600/10 to-pink-600/10 backdrop-blur-md border border-purple-500/20"
+                className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-600/10 to-cyan-600/10 backdrop-blur-md border border-purple-500/20"
                 animate={{
                   scale: [1, 1.2, 1],
                 }}

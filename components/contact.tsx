@@ -145,7 +145,7 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600"
             variants={itemVariants}
           >
             Let's Connect
@@ -251,7 +251,7 @@ export default function Contact() {
                   required
                   data-cursor-text="Type here"
                 />
-                <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 w-0 group-focus-within:w-full transition-all duration-300"></div>
+                <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-600 w-0 group-focus-within:w-full transition-all duration-300"></div>
               </div>
 
               <div className="relative">
@@ -290,7 +290,7 @@ export default function Contact() {
 
               <motion.button
                 type="submit"
-                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-medium hover:opacity-90 transition-opacity flex items-center gap-2 relative overflow-hidden w-full justify-center"
+                className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg text-white font-medium hover:opacity-90 transition-opacity flex items-center gap-2 relative overflow-hidden w-full justify-center"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}

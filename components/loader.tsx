@@ -41,7 +41,7 @@ export default function Loader() {
       </div>
 
       <motion.h1
-        className="text-white text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+        className="text-white text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600"
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
       >
@@ -50,7 +50,7 @@ export default function Loader() {
 
       <div className="w-64 h-2 bg-gray-800 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-gradient-to-r from-purple-600 to-pink-500"
+          className="h-full bg-gradient-to-r from-purple-600 to-cyan-500"
           style={{ width: `${progress}%` }}
           initial={{ x: "-100%" }}
           animate={{ x: "0%" }}

@@ -88,7 +88,7 @@ export default function Skills() {
   return (
     <section id="skills" ref={sectionRef} className="py-20 px-4 md:px-12 bg-black/30 relative z-10">
       <TextReveal>
-        <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+        <h2 className="text-3xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600">
           My Skills
         </h2>
       </TextReveal>
@@ -106,7 +106,7 @@ export default function Skills() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-full text-white font-medium transition-all ${
                 activeTab === tab.id
-                  ? "bg-gradient-to-r from-purple-600 to-pink-600 shadow-lg shadow-purple-500/20"
+                  ? "bg-gradient-to-r from-purple-600 to-cyan-600 shadow-lg shadow-purple-500/20"
                   : "bg-gray-800/50 backdrop-blur-sm hover:bg-gray-700/50 border border-gray-700 hover:border-purple-500/50"
               }`}
             >

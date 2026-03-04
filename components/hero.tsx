@@ -59,7 +59,7 @@ export default function Hero() {
         >
           <h1
             ref={nameRef}
-            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 interactive-text"
+            className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-600 interactive-text"
           ></h1>
 
           {nameTyped && <InteractiveText mousePosition={mousePosition} isMobile={isMobile} />}
@@ -72,7 +72,7 @@ export default function Hero() {
           className="mb-6"
         >
           <TextReveal>
-            <h3 className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-2 rounded-lg text-white font-semibold text-lg">
+            <h3 className="inline-block bg-gradient-to-r from-purple-600 to-cyan-600 px-4 py-2 rounded-lg text-white font-semibold text-lg">
               AI Engineer
             </h3>
           </TextReveal>
@@ -96,7 +96,7 @@ export default function Hero() {
           <a
             href="Resume.pdf"
             download
-            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-medium hover:opacity-90 transition-opacity relative group overflow-hidden"
+            className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full text-white font-medium hover:opacity-90 transition-opacity relative group overflow-hidden"
           >
             <span className="relative z-10">Download CV</span>
             <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
@@ -118,11 +118,11 @@ export default function Hero() {
         className="w-full md:w-1/2 flex justify-center z-10"
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-purple-500 transform-gpu hover:scale-105 transition-transform duration-300">
             {/* Removed the overlay filter */}
             {imageError ? (
-              <div className="w-full h-full bg-gradient-to-br from-purple-800 to-pink-700 flex items-center justify-center">
+              <div className="w-full h-full bg-gradient-to-br from-purple-800 to-cyan-700 flex items-center justify-center">
                 <span className="text-white text-4xl font-bold">AS</span>
               </div>
             ) : (
